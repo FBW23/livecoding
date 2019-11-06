@@ -1,0 +1,11 @@
+main {
+    background-image: url('spooky.jpg');
+    background-size: contain;
+    background-repeat: no-repeat; /*de-facto standard */
+    /* background-position: 50% 50%; 
+    background-position: left top;
+    background: url('spooky.jpg') 50% 50%/cover no-repeat;*/
+    /* background: url('spooky.jpg') left top/contain no-repeat; */
+    border: 5px solid black;
+    height: 1000px;
+}

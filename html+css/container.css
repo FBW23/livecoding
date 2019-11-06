@@ -1,0 +1,65 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    display: inline;
+}
+
+span, sub {
+    /* display: block; */
+}
+
+span {
+    background: greenyellow;
+    padding-right: 15px;
+}
+
+sub {
+    background: grey;
+    margin: -4px;
+}
+
+.container {
+    color: white;
+    height: 200px;
+    /* overflow-wrap: break-word; */
+    white-space: nowrap;
+}
+
+noscript {
+    display: block;
+}
+
+article, aside {
+    border: 5px solid blue;
+    margin: 5px;
+    padding: 5px;
+}
+
+aside {
+    background: green;
+    color: black;
+    display: inline-block;
+    width: 40%;
+}
+
+article {
+    background: black;
+    display: inline-block;
+    text-overflow: clip;
+    width: 60%;
+}
+
+.container img {
+    display: block;
+    float: right;
+    height: 100%;
+    margin: 0 auto;
+
+}
+
+.diveritis {
+    background: red;
+}

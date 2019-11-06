@@ -1,0 +1,146 @@
+/* 
+/* @media screen and (max-width: 576px) { */
+/*small phone */
+h1 {
+    font-size: 30px;
+    color: blue;
+}
+/* } */
+@media screen and (min-width: 577px) and (max-width: 768px) {
+
+    /*very big phones */
+    h1 {
+        font-size: 40px;
+        color: green;
+    }
+}
+
+@media screen and (min-width: 769px) and (max-width: 992px) {
+
+    /* tablets */
+    .tablet {
+        background-color: pink;
+        color: blue;
+    }
+
+    h1 {
+        font-size: 85px;
+        color: gray;
+    }
+}
+
+@media screen and (min-width: 993px) {
+
+    /* desktop */
+    h1 {
+        font-size: 185px;
+        color: yellow;
+    }
+}
+
+/* My CSS comes here
+body {
+    background-color: lightblue;
+}
+
+h1 {
+    color: red;
+}
+
+p {
+    /* color: fuchsia; */
+/* color: rgba(red, green, blue, alpha); */
+/* }
+
+h2 {
+    /*background-color: dodgerblue;*/
+
+
+/* a:link not needed */
+
+*,
+body {
+    font-family: Arial, sans-serif;
+    color: orange;
+}
+
+/* body {
+    font-family: Arial, sans-serif;
+    color: orange;
+}
+
+* {
+    font-family: Arial, sans-serif;
+    color: orange;
+} */
+
+span {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: black;
+}
+
+sup,
+sub {
+    color: red;
+    font-weight: 800;
+}
+
+a {
+    color: pink;
+}
+
+a:visited {
+    color: orange;
+}
+
+a:hover {
+    color: yellow;
+}
+
+a:active {
+    color: green;
+}
+
+input:not(:checked) {
+    box-shadow: 0 0 0 13px orange;
+}
+
+input:checked+label {
+    color: red;
+}
+
+img {
+    height: 523px;
+    width: 50%;
+
+    /* border: 10px outset red; */
+
+    border-top: 10px dashed purple;
+    border-right: 14px solid red;
+    border-bottom: 12px dotted green;
+    border-left: none;
+
+    /* border-radius: 5px; */
+
+    border-top-left-radius: 15px;
+    border-top-right-radius: 305px;
+    border-bottom-right-radius: 150px;
+    border-bottom-left-radius: 0px;
+
+
+}
+
+p {
+    /* font-weight: 800; bold */
+    text-align: right;
+    font-style: italic;
+}
+
+img:hover+p {
+    background-color: darkred;
+}
+
+input:focus {
+    background: yellow;
+    color: blue;
+}

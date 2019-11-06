@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css?family=Monofett|Monoton&display=swap');
+
+:root {
+    /* font-size: 62.5%;  16px*62.5%=10px at the beginning */
+}
+
+* {
+    font-family: 'Raleway', sans-serif;
+    /* more specific than :root */
+    /* font-family: 'Monofett', cursive; */
+    /* font-size: 15px; */
+
+    /* font-family: 'ZCOOL XiaoWei', serif; */
+
+
+    /* font-family: Arial, "Times New Roman", sans-serif, serif; */
+}
+
+.bold {
+    font-weight: bold;
+    text-transform: capitalize;
+    /* 800 == bold*/
+}
+
+/*400 is normal */
+
+.thin {
+    font-weight: lighter;
+}
+
+.italic {
+    font-style: italic;
+}
+
+div {
+    border: 3px solid crimson;
+    font-size: 30px;
+    max-width: 200px;
+    text-align: right;
+    text-decoration: underline;
+}
+
+.absolute {
+    font-size: 30px;
+    direction: rtl;
+    text-align: center;
+}
+
+.absolute-justify {
+    font-size: 30px;
+    direction: rtl;
+    text-align: justify;
+}
+
+
+.absolute-nothing {
+    font-size: 30px;
+    direction: rtl;
+}
+
+
+.relative {
+    font-size: 1.2rem;
+    /* 10px*1.2= 12px at the end */
+    text-align: center;
+}
+
+.second-relative {
+    font-size: 1.2em;
+    /* 30px*1.2= 36px */
+    text-align: center;
+}
+
+i {
+    font-size: 5.15rem;
+}

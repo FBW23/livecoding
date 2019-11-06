@@ -1,0 +1,41 @@
+* {
+    box-sizing: border-box;
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    display: flex;
+    flex-direction: column; /** horizontally **/
+}
+
+ul {
+    list-style-type: none;
+}
+
+ul li {
+    border-bottom: 1px solid black;
+    padding: 5px;
+    text-align: center;
+}
+
+li a {
+    /* display: block; */
+    text-decoration: none;
+    
+}
+
+@media screen and (min-width: 456px)  {
+    ul {
+        display: flex;
+        /* flex-direction: row; STANDARD */
+    }
+
+    ul li {
+        border: 1px solid black;
+        flex: 1;
+        /* display: inline-block; */
+        /* width: 33%; */
+    }
+}

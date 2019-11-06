@@ -1,0 +1,62 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    background: green;
+    display: flex;
+    height: 100vh;
+}
+
+figure {
+    background: gray;
+    border: 1px solid black;
+    margin: auto;
+    /** center center **/
+    padding: 20px;
+    width: 20%;
+}
+
+
+figure > img {
+    /** direct child selector*/
+    width: 100%;
+}
+
+.firstKitty {
+    flex-shrink: 1;
+    order: 1;
+}
+
+.secondKitty {
+    flex-grow: 1;
+    /** takes rest of the space **/
+}
+
+.thirdKitty {
+    order: 1;
+}
+
+@media screen and (min-width: 500px) {
+    .firstKitty {
+        display: none;
+        /*visibility: hidden;*/
+    }
+
+    .thirdKitty {
+        order: -1;
+    }
+}
+
+@media screen and (min-width: 900px) {
+    .firstKitty {
+        display: block;
+        /* visibility: visible; */
+    }
+
+    .secondKitty {
+        order: 3;
+    }
+}
