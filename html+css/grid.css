@@ -1,0 +1,19 @@
+main {
+    display: grid;
+    grid-template-columns: repeat(5, auto);
+    grid-template-rows: auto;
+    grid-gap: 1%;
+}
+
+section {   
+    border: 1px solid black;
+}
+
+.second {
+    grid-column: 2 / span 2;
+}
+
+.ninth {
+    grid-row: 2 / span 3;
+    grid-column: 5;
+}

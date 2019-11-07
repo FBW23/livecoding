@@ -1,0 +1,30 @@
+.item-a {
+    grid-area: header; /**keyword **/
+}
+
+.item-b {
+    grid-area: main;
+}
+
+.item-c {
+    grid-area: sidebar;
+}
+
+.item-d {
+    grid-area: footer;
+}
+
+.container {
+    border: 1px solid black;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+        "header header header header" /** fills one line completely */
+        "main main . sidebar" /** empty cells **/
+        "footer footer footer footer";
+}
+
+section {
+    border: 1px solid black;
+}
