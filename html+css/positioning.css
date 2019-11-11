@@ -1,0 +1,26 @@
+body{
+  position: relative;
+  background: gray;
+  height: 100vh;
+}
+
+.red {
+  background: red;
+  width: 500px;
+  height: 500px;
+  position: relative;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+}
+
+.black {
+  background: black;
+  width: 20px;
+  height: 350px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+}

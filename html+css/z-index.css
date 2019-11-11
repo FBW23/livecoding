@@ -1,0 +1,29 @@
+.dashed-box {
+    /*container*/
+    position: relative;
+    border: 2px dashed black;
+    background: gray;
+    width: 500px;
+    height: 500px;
+    z-index: 1;
+}
+
+.gold-box {
+    position: absolute;
+    background: gold;
+    display: inline-block;
+    width: 200px;
+    height: 200px;
+    left: 60px;
+    top: 3em;
+    z-index: 3;
+}
+
+.green-box {
+    position: absolute;
+    background: green;
+    display: inline-block;
+    width: 200px;
+    height: 200px;
+    z-index: 2;
+}
