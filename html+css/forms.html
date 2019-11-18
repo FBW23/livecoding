@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="http://google.com" method="GET">
+        <label for="firstName">First Name:</label>
+        <input type="text" name="firstName" id="firstName" required placeholder="Martina">
+        <label for="lastName">Last Name:</label>
+        <!--shorthand required-->
+        <input type="text" name="lastName" id="lastName" required="required" placeholder="Freundorfer">
+        <label for="textarea">Write a short story about yourself:</label>
+        <textarea name="textarea" id="textarea"></textarea>
+        <label for="email">Email-Adress</label>
+        <input type="email" name="email" id="email" placeholder="name@domain.com">
+        <label for="country">Country</label>
+        <input type="text" name="country" id="country" placeholder="Country" value="Germany">
+        <label for="color">Pick a color</label>
+        <input type="color" value="#0000FF">
+        <input type="reset">
+        <button type="submit">Submit me!</button>
+    </form>
+
+    <!-- <form action="mylogin.html" method="POST"> MUST BE A POST NORMALLY-->
+    <form action="mylogin.html" method="GET">
+
+        <fieldset>
+            <legend>Login required</legend>
+
+            <label for="userName">User Name</label><br />
+            <input type="text" id="userName" name="userName" placeholder="User Name">
+
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" placeholder="Password">
+            <!-- <button type="submit">Submit me!</button> -->
+            <input type="image" id="image" alt="Login" src="images/kitty.jpg">
+            <!--alternative to the button -->
+        </fieldset>
+    </form>
+
+    <form action="betterthangoogle.html" method="POST">
+        <fieldset>
+            <legend>Better than Google</legend>
+
+            <label for="searchField">Search now:</label><br />
+            <input type="search" id="searchField" name="searchField" placeholder="Ariana Grande">
+
+            <button type="submit">Submit me!</button>
+        </fieldset>
+    </form>
+
+    <form action="http://google.com" method="GET">
+        <fieldset>
+            <legend>Choose all your favorite monsters</legend>
+            <!--Yes or no questions? -->
+            <input type="checkbox" id="kraken" name="kraken" checked>
+            <!--shorthand checked-->
+            <label for="kraken">Kraken</label><br />
+            <!--Are you smoking-->
+            <input type="checkbox" id="sasquatch" name="sasquatch" checked="checked">
+            <label for="sasquatch">Sasquatch</label><br />
+            <!--Are you drunk? -->
+            <input type="checkbox" id="mothman" name="mothman">
+            <label for="mothman">Mothman</label>
+            <!--Did you read terms and conditions? -->
+            <button type="submit">Submit me!</button>
+        </fieldset>
+    </form>
+
+    <!--Radio Buttons ON OF MANY-->
+    <form>
+        <fieldset>
+            <legend>Choose your favorite monster</legend>
+
+            <input type="radio" id="kraken" name="monster">
+            <label for="kraken">Kraken</label><br />
+
+            <input type="radio" id="sasquatch" name="monster">
+            <label for="sasquatch">Sasquatch</label><br />
+
+            <input type="radio" id="mothman" name="monster">
+            <label for="mothman">Mothman</label>
+
+            <button type="submit">Submit me!</button>
+        </fieldset>
+    </form>
+
+    <form action="oneofmany.html">
+        <label for="chooseCountry">Choose a Country</label>
+        <select name="chooseCountry" id="chooseCountry">
+            <option value="" selected>Please choose a country</option>
+            <!--empty value-->
+            <option value="syria">Syria</option>
+            <option value="israel">Israel</option>
+            <option value="brasil">Brasil</option>
+            <option value="tuvalu">Tuvalu</option>
+            <option value="chad">Chad</option>
+            <option value="albania">Albania</option>
+            <option value="france">France</option>
+            <option value="italy">Italy</option>
+            <option value="moldova" selected>Moldova</option>
+        </select>
+        <button type="submit">Submit me!</button>
+    </form>
+    <form action="#">
+        <button type="submit">button type="submit"</button>
+        <br>
+        <input type="submit" value="input type='button' value=">
+        <br>
+        <input type="image" src="images/google.svg">
+    </form>
+
+</body>
+
+</html>

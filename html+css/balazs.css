@@ -1,0 +1,51 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background: rgb(51, 51, 51);
+    height: 50px;
+}
+
+ul {
+    list-style: none;
+}
+
+li {
+    display: inline-block;
+    padding: 16px; 10px;
+    color: white;
+}
+
+
+.submenu {
+    display: none;
+    position: absolute;
+    top: 50px;
+    left: 0;
+}
+
+
+.submenu li,
+.mainmenu li:hover .submenu,
+.submenu:hover {
+    display: block;
+    width: 100%;
+}
+
+
+.submenu,
+.mainmenu li:hover {
+    background: rgb(45, 138, 203);
+}
+
+.submenu li:hover {
+    color: black;
+    background: rgb(238, 238, 238);
+}
+
+.dwnarrow {
+    font-size: 10px;
+}

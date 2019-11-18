@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <meta name="author" content="Jamil">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="jamils.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <section id="myNav" class="overlay">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <section class="overlay-content">
+            <a href="#">About</a>
+            <a href="#">Meet the team</a>
+            <a href="#">Careers</a>
+            <a href="#">Florists</a>
+            <a href="#">Contact</a>
+        </section>
+
+    </section>
+    <span onclick="openNav()">&#9776;Open</span>
+
+    <!-- <script>
+        function openNav() {
+            document.getElementById("myNav")
+                .style.height = "100%";
+        }
+        function closeNav() {
+            document.getElementById("myNav")
+                .style.height = "0";
+        }
+    </script> -->
+
+
+
+    <!-- by commenting this script again into the document and of course
+         (commenting the first script out , you ll be able to 
+         slide the menu left-right among with applying appropriate changes to the CSS file (tips are in css file)
+        it will change the movement direction from up-dwn to lft-rght-->
+
+    <script>
+        function openNav() {
+            document.getElementById("myNav")
+                .style.width = "100%";
+        }
+        function closeNav() {
+            document.getElementById("myNav")
+                .style.width = "0";
+        }
+    </script> 
+
+<!-- i hope i explained this document fair -->
+<!-- Jamil -->
+
+
+</body>
+
+</html>

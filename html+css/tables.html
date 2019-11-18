@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="tables.css">
+</head>
+
+<body>
+    <!-- must have -->
+    <table>
+
+        <!--optional-->
+        <caption><h1>Council budget (in £) 2018</h1></caption>
+        <!-- optional -->
+        <thead>
+            <tr>
+                <th scope="column">Title of the rows</th>
+                <th scope="column">Head head 2</th>
+                <th scope="column">Head head 3</th>
+                <th scope="column">Head head 4</th>
+                <th scope="column">Head head 5</th>
+            </tr>
+        </thead>
+        <!-- optional -->
+        <tbody>
+            <!-- must have -->
+            <tr>
+                <th scope="row" rowspan="4">Head 1</th>
+                <!-- must have -->
+                <td>hTML Table</td>
+                <td>Two</td>
+                <td>Three</td>
+                <td>missing cell</td>
+            </tr>
+            <tr>
+                <th scope="row">Head 2</th>
+                <td colspan="3">I want to span over three columns</td>
+            </tr>
+            <tr>
+                <th scope="row">Head 3</th>
+                <td colspan="2">I want to span over two columns</td>
+                <td>Hello cell</td>
+            </tr>
+            <tr>
+                <th scope="row">Head 4</th>
+                <td><img src="images/google.svg"></td>
+                <td colspan="2">I want to span over two columns</td>
+            </tr>
+            <tr>
+                <th scope="row">Head 5</th>
+                <td>Hello cell</td>
+                <td colspan="3">I want to span over two columns</td>
+            </tr>
+            <tr>
+                <th scope="row">Head 6</th>
+                <td>Hello cell</td>
+                <td colspan="3">I want to span over two columnsI want to span over two columnsI want to span over two
+                    columnsI want to span over two columnsI want to span over two columnsI want to span over two
+                    columnsI want to span over two columnsI want to span over two columnsI want to span over two
+                    columnsI want to span over two columnsI want to span over two columnsI want to span over two
+                    columnsI want to span over two columnsI want to span over two columnsI want to span over two
+                    columnsI want to span over two columns</td>
+            </tr>
+            <tr>
+                <th scope="row">Head 7</th>
+                <td>Hello cell</td>
+                <td colspan="3">I want to span over two columns</td>
+            </tr>
+            <tr>
+                <th scope="row">Head 8</th>
+                <td>Hello cell</td>
+                <td colspan="3">I want to span over two columns</td>
+            </tr>
+            <tr>
+                <th scope="row">Head 9</th>
+                <td>Hello cell</td>
+                <td colspan="3">I want to span over two columns</td>
+            </tr>
+
+        </tbody>
+        <!-- optional -->
+        <tfoot>
+            <tr>
+                <th scope="row">Totals</th>
+                <td>21,000</td>
+                <td>21,000</td>
+                <td colspan="2">21,000</td>
+            </tr>
+        </tfoot>
+
+    </table>
+
+    <div class="table">
+        <div>
+            <div>Display Table</div>
+            <div>Two</div>
+            <div>Three</div>
+        </div>
+    </div>
+</body>
+
+</html>

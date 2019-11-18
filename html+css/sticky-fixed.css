@@ -1,7 +1,7 @@
 * {
     box-sizing: border-box;
-  }
-  
+}
+
 .fixed {
     background: url('images/hello-kitty.jpeg');
     position: fixed;
@@ -14,13 +14,13 @@ dl {
     z-index: 0;
 }
 
-  dl > div {
+dl>div {
     background: transparent;
 
     padding: 24px 0 0 0;
-  }
-  
-  dt {
+}
+
+dt {
     background: #B8C1C8;
     border-bottom: 1px solid #989EA4;
     border-top: 1px solid #717D85;
@@ -31,15 +31,15 @@ dl {
     position: -webkit-sticky;
     position: sticky;
     top: -1px;
-  }
-  
-  dd {
+}
+
+dd {
     font: bold 20px/45px Helvetica, Arial, sans-serif;
     margin: 0;
     padding: 0 0 0 12px;
     white-space: nowrap;
-  }
-  
-  dd + dd {
+}
+
+dd+dd {
     border-top: 1px solid #CCC;
-  }
+}

@@ -1,0 +1,44 @@
+/* 
+ul {
+    list-style-type: none;
+}
+
+
+
+button {
+    padding: 20px;
+}
+
+.hidden li {
+    display: block;
+}*/
+
+* {
+    padding: 0;
+}
+
+.show {
+    list-style-type: none;
+}
+
+.show li {
+    display: inline-block;
+}
+
+.hidden {
+    position: absolute;
+    transition: all 1s ease;
+    visibility: hidden;
+}
+
+.hidden li {
+    left: 100px;
+    display: block;
+}
+
+.show li:hover .hidden,
+:focus .hidden {
+    /*focus is broken */
+    visibility: visible;
+    font-size: 1.5em;
+}
