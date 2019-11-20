@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <label for="teacher2">Your Mentoring teacher is gonna be:</label>
+    <input type="text" value="Benjamin" name="teacher2" id="teacher2"><br><br>
+    <label for="teacher">Your teacher is gonna be:</label>
+    <input type="text" value="Martina Freundorfer" name="teacher" id="teacher" disabled>
+    <select name="chooseCountry" id="chooseCountry">
+        <option value="" selected>Please choose a country</option>
+        <!--empty value-->
+        <option value="syria">Syria</option>
+        <option value="israel">Israel</option>
+        <option value="brasil">Brasil</option>
+        <option value="tuvalu">Tuvalu</option>
+        <option value="chad">Chad</option>
+        <option value="albania">Albania</option>
+        <option value="france">France</option>
+        <option value="italy">Italy</option>
+        <option value="moldova" selected>Moldova</option>
+    </select>
+    <select name="chooseCountry" id="chooseCountry" multiple>
+        <option value="" selected>Please choose a country</option>
+        <!--empty value-->
+        <option value="syria">Syria</option>
+        <option value="israel">Israel</option>
+        <option value="brasil">Brasil</option>
+        <option value="tuvalu">Tuvalu</option>
+        <option value="chad">Chad</option>
+        <option value="albania">Albania</option>
+        <option value="france">France</option>
+        <option value="italy">Italy</option>
+        <option value="moldova" selected>Moldova</option>
+    </select>
+
+    <select name="chooseCountry" id="chooseCountry" multiple>
+        <option value="" selected>Please choose all your countries</option>
+        <!--empty value-->
+        <optgroup label="Middle East">
+            <option value="syria">Syria</option>
+            <option value="israel">Israel</option>
+        </optgroup>
+        <optgroup label="European">
+            <option value="france">France</option>
+            <option value="italy">Italy</option>
+            <option value="albania">Albania</option>
+            <option value="moldova" selected>Moldova</option>
+        </optgroup>
+        <optgroup label="South American">
+            <option value="brasil">Brasil</option>
+            <option value="tuvalu">Tuvalu</option>
+        </optgroup>
+        <optgroup label="African">
+            <option value="chad">Chad</option>
+        </optgroup>
+    </select>
+</body>
+
+</html>

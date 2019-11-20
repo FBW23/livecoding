@@ -1,0 +1,10 @@
+.btn, .btn:active, .btn:focus {
+    border: 0;
+    padding: 0.75rem 1.25rem;
+    margin: 1.25rem 0 0 0;
+    font-size: 1rem;
+    text-align: center;
+    color: #fff;
+    border-radius: 0.5rem;
+    background-color: #09aa16;
+}

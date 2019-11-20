@@ -1,3 +1,23 @@
 input[type="text"] {
     background: red;
 }
+
+textarea:focus {
+    background: black;
+    color: white;
+    /* border: 1px solid green; */
+    /* outline-color: lightcoral;
+    outline-offset: 20px; */
+    outline: none;
+}
+
+/** Select specific types of input elements **/
+[type="color"] {
+    background: blue;
+}
+
+[type="checkbox"] {
+    outline: 2px solid red;
+    border: 2px solid black;
+}
+
