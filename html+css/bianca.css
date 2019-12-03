@@ -1,0 +1,11 @@
+input {
+    border-color: black;
+}
+
+input[type="text"]:focus {
+    border-color: red;
+}
+
+input[type="email"]:focus {
+    border-color: blue;
+}

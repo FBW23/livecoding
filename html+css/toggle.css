@@ -7,40 +7,43 @@ input[type=checkbox] {
 label {
     cursor: pointer;
     text-indent: -9999px;
-    width: 200px;
-    height: 100px;
+    width: 100px;
+    height: 50px;
     background: grey;
     display: block;
-    border-radius: 100px;
+    border-radius: 50px;
     position: relative;
 }
 
 label:after {
     content: '';
     position: absolute;
-    top: 5px;
-    left: 5px;
-    width: 90px;
-    height: 90px;
+    top: calc(5px/2);
+    left: calc(5px/2);
+    width: 45px;
+    height: 45px;
     background: #fff;
-    border-radius: 90px;
+    border-radius: 45px;
     transition: 0.3s;
 }
 
 input:checked+label {
-    background: #bada55;
+    background: purple;
 }
 
 input:checked+label:after {
-    left: calc(100% - 5px);
+    left: calc(100% - 3px);
     transform: translateX(-100%);
 }
 
 label:active:after {
-    width: 130px;
+    width: 65px;
 }
 
- /* centering */
+input:checked+label {
+    background: purple;
+}
+/* // centering */
 body {
     display: flex;
     justify-content: center;

@@ -1,0 +1,10 @@
+:root {
+  --my-favorite-color: hotpink;
+  --my-second-color: red;
+}
+
+body {
+  background: linear-gradient(var(--my-favorite-color), var(--my-second-color));
+}
+
+/*# sourceMappingURL=sass.css.map */

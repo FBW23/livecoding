@@ -1,0 +1,28 @@
+$my-favorite-color: hotpink;
+$my-second-color: blue;
+$my-third-color: green;
+
+body {
+    background: linear-gradient($my-favorite-color, $my-second-color);
+    color: $my-second-color;
+
+    h1 {
+        background: white;
+
+        &:hover {
+            background: hotpink;
+        }
+
+        span {
+            background: hotpink;
+
+            i {
+                background: blue;
+            }
+
+        }
+    }
+}
+
+// 1) make a hover on your title
+// 2) with nesting :) 
