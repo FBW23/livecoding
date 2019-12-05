@@ -1,0 +1,28 @@
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: 100px 100px 100px;
+  grid-template-areas: "yellow yellow yellow red red red red red red red red red" "yellow yellow yellow green green green green blue  blue blue blue blue" "yellow yellow yellow green green green green blue  blue blue blue blue";
+}
+
+.item1 {
+  background: yellow;
+  grid-area: yellow;
+}
+
+.item2 {
+  background: red;
+  grid-area: red;
+}
+
+.item3 {
+  background: green;
+  grid-area: green;
+}
+
+.item4 {
+  background: blue;
+  grid-area: blue;
+}
+
+/*# sourceMappingURL=grid-repeat.css.map */

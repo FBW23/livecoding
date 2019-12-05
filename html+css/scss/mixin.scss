@@ -1,0 +1,20 @@
+// @mixin reset-everything() {
+//     margin: 0;
+//     padding: 0;
+//     box-sizing: border-box;
+//     border: 0;
+// }
+
+@mixin set-everything($margin: 0, $padding: 0, $box-sizing: border-box, $border: 0) {
+    margin: $margin;
+    padding: $padding;
+    box-sizing: $box-sizing;
+    border: $border;
+}
+
+* {
+    // margin: 0;
+    // padding: 0;
+    // @include reset-everything();
+    @include set-everything();
+}

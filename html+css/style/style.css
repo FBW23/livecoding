@@ -1,0 +1,18 @@
+body {
+  background: linear-gradient(hotpink, blue);
+  color: blue;
+}
+body h1 {
+  background: white;
+}
+body h1:hover {
+  background: hotpink;
+}
+body h1 span {
+  background: hotpink;
+}
+body h1 span i {
+  background: blue;
+}
+
+/*# sourceMappingURL=style.css.map */
