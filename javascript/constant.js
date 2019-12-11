@@ -103,7 +103,48 @@ let chickenDay = "             Wednesday               ";
 // STRING.PROTOTYPE.TRIM
 console.log(chickenDay.trim());
 console.log(chickenDay.trim().length);
+// trim only trims empty spaces before and after the string 
 
 // EXERCISE AFTER THE BREAK :D
 
+let myString = "good afternoon! FBW"; // string
+let myNumber = 23; // number
+console.log(myString + myNumber); // everything becomes a string when adding number and string
 
+let myStringNumber = "23"; // String 
+console.log(myStringNumber + myNumber); // String will always WIN! 
+console.log(`${myStringNumber}${myNumber}`); // also here
+console.log(`${myStringNumber + myNumber}`); // same here
+console.log(`${myNumber + myNumber}`); // Addition possible, still becomes a string!
+console.log(`${myNumber * myNumber}`); // Multiplication possible, still becomes a string!
+
+// INTEGERS 
+let integer = 6; // whole numbers 
+// FLOATS 
+let float = '3.14'; 
+
+// parseInt() 
+// CONVERT STRINGS INTO WHOLE NUMBERS
+const newNumber = parseInt(myStringNumber, 10); // First argument string, second Math Base!
+console.log(newNumber); // Decimal base = 10
+
+// parseFloat()
+// CONVERT STRINGS INTO FLOATS!
+const newFloat = parseFloat(float);
+console.log(newFloat);
+
+// Can we also convert whole numbers with float? 
+const newFloat2 = parseFloat(myStringNumber);
+console.log(newFloat2); // YES WE CAN! 
+
+const newString = parseFloat(helloWorld);
+console.log(newString); // NaN cannot convert String to Number 
+
+const newInteger = parseInt(float); // 3.14
+console.log(newInteger); // output: 3
+
+let round = 3.5;  // BE CAREFUL! IT DOES NOT ROUND ANYHOW! 
+const newRound = parseInt(round); // cuts off the part after the point 
+console.log(newRound); // maybe also good for cutting after the comma
+
+ 
