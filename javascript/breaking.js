@@ -69,3 +69,69 @@ for (let i = 0; i < 5; i++) {
     }
 }
 console.log(stars);
+
+// TASK: Please produce this output with nested loops
+
+// 1 1 1 2 2 2 3 3 3 4 4 4
+
+// 0 1 2 3 4 0 1 2 3 4 0 1 2 3 4
+
+// Tell me if you have something that works
+
+// isPalindrome ? 
+
+let checkWord = 'EVE';
+let bigWord = checkWord.toUpperCase();
+let isPalindrome = false; // Helper Variables 
+console.log(bigWord);
+
+//for (let i = 0; i < bigWord.length / 2 ; i++) { EVEN WORDS
+// for (let i=0; i !== bigWord.length - (i + 1); i++) { UNEVEN WORDS 
+for (let i = 0;
+    (i < bigWord.length / 2) && (i !== bigWord.length - (i + 1)); i++) {
+
+    console.log('compared' + bigWord.charAt(i) + ' to ' + bigWord.charAt(bigWord.length - (i + 1)));
+
+    if (bigWord.charAt(i) === bigWord.charAt(bigWord.length - (i + 1))) {
+        console.log('It might be a palindrome!');
+        isPalindrome = true;
+    } else {
+        console.log('It is not a palindrome!');
+        isPalindrome = false;
+        break;
+    }
+}
+
+console.log(checkWord + ' is a Palindrome? Answer is ' + isPalindrome);
+
+let reverse = bigWord.reverse; // Later with ARRAYS, not possible like this right now
+console.log(reverse);
+
+// BREAKTIME 15 MINUTES 1408 +15 
+
+// Exercise
+// #1 Output: 9 7 5 3 1 
+
+for (let i = 9; i >= 0; i -= 2) {
+    // if (i % 2) {
+    console.log(i);
+    //}
+}
+
+// Bonus: #2 "Peter Picker picked pickles" isAlliteration? yes or no? 
+// Tell me when you're ready
+
+let string = 'Peter Picker picked pickles';
+let array = string.toUpperCase().split(' ');
+let helper = false;
+for (let i = 1; i < array.length; i++) {
+    if(array[i].charAt(0) === array[i-1].charAt(0)) {
+        console.log('It might be a Alliteration');
+        helper = true;
+    } else {
+        console.log('Its not an alliteration');
+        helper = false;
+        break;
+    }
+}
+console.log(array);
