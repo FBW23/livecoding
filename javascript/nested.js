@@ -8,8 +8,8 @@ for (let i = 0; i < 4; i++) {
 console.log(varOne);
 
 // is a sentence an alliteration or not? 
-let isAlliteration = false;
-const input = 'hello habibi'; // Original Input should be saved
+let isAlliteration = false; // helper value
+const input = 'aello asd asdasdasd'; // Original Input should be saved
 const myString = input.toLowerCase().trim(); //formatting into the correct string
 const firstChar = myString.charAt(0); //p
 console.log(firstChar);
