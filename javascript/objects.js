@@ -116,7 +116,7 @@ const howMuchisOneWord = (word) => {
     let currentChar, currentNumber;
     // console.log(ALPHABET.length); // 27 
     for (let i = 0; i < word.length; i++) {
-        currentChar = word.charAt(i); // H
+        currentChar = word.charAt(i).toLowerCase(); // H
         // search in Array? indexOf() => position where it finds first
         currentNumber = ALPHABET.indexOf(currentChar); // 8
         sum += currentNumber;
@@ -124,4 +124,4 @@ const howMuchisOneWord = (word) => {
     }
     return sum;
 };
-console.log(howMuchisOneWord('world'));
+console.log(howMuchisOneWord('World'));
