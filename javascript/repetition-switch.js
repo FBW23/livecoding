@@ -248,11 +248,11 @@ console.log(toBinary(682));
 function toDecimal(binaryNumber2) {
     let binaryNumber = binaryNumber2.toString();
     let decimalNumber = 0;
-    const last = binaryNumber.length-1; // 9
+    const last = binaryNumber.length - 1; // 9
     //console.log(last);
     for (let i = 0; i < binaryNumber.length; i++) {
         //console.log('last char: ' + binaryNumber.charAt(last-i));
-        if (binaryNumber.charAt(last-i) === '1') {
+        if (binaryNumber.charAt(last - i) === '1') {
             //console.log(decimalNumber);
             decimalNumber += Math.pow(2, i);
         }
@@ -266,3 +266,66 @@ console.log(toDecimal(1111111111)); //1023
 // GEOCACHING 
 // PUZZLE: 
 
+function sumPowerOfs(number) {
+    let sum = 0;
+    let binaryNumber = toBinary(number).toString();
+    //console.log(binaryNumber);
+    const last = binaryNumber.length - 1; // 9
+    for (let i = 1; i < binaryNumber.length; i++) {
+        if (binaryNumber.charAt(last - i) === '1') {
+            //console.log(sum);
+            sum += i;
+        }
+    }
+    return sum;
+}
+//console.log(sumPowerOfs(123));
+
+function findNumbersWhichFit() {
+    let xxx = new Array();
+    let yyy = new Array();
+    let sum = new Array();
+    let dif = new Array();
+    for (let i = 100; i < 1000; i++) {
+        let check = sumPowerOfs(i);
+        if (check === 35) { // XXX
+            xxx.push(i);
+            //console.log('It fits to XXX: ' + i);
+        }
+        if (check === 11) {
+            yyy.push(i);
+            //console.log('It fits to YYY: ' + i);
+        }
+    }
+    for (let j = 200; j < 2000; j++) {
+        let check = sumPowerOfs(j);
+        if (check === 37) {
+            sum.push(j);
+            //console.log('It fits to ZZZ: ' + j);
+        }
+    }
+    for (let k = 0; k < 900; k++) {
+        let check = sumPowerOfs(k);
+        if (check === 36) {
+            dif.push(k);
+            //console.log('It fits to DDD: ' + k);
+        }
+    }
+    console.log(xxx.length + ' numbers fitting to xxx: ' + xxx);
+    console.log(yyy.length + ' numbers fitting to yyy: ' + yyy);
+    console.log(sum.length + ' numbers fitting to sum: ' + sum);
+    console.log(dif.length + ' numbers fitting to diff: ' + dif);
+    let a, b, c, sums = 0;
+    for (; a < xxx.length; a++) {
+        for (; b < yyy.length; b++) {
+            sums = xxx[a] + yyy[b];
+            for (; c < sum.length; c++) {
+                //console.log(xxx[a] + ' + ' + yyy[b] + ' = ' + sums + ' === ' + sum[c] + ' ?');
+                if (sums === sum[c]) {
+                    console.log('its a match');
+                }
+            }
+        }
+    }
+}
+findNumbersWhichFit();
