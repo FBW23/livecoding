@@ -110,7 +110,7 @@ console.log(spaceWeights("Earth", 1, "Jupiter")); // ➞ 2.53
 console.log(spaceWeights("Earth", 1, "Neptune")); // ➞ 1.14
 
 
-const howMuchisOneWord = (word) => {
+const howMuchIsOneWord = (word) => {
     let sum = 0;
     const ALPHABET = ['alphabet', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
     let currentChar, currentNumber;
@@ -124,4 +124,28 @@ const howMuchisOneWord = (word) => {
     }
     return sum;
 };
-console.log(howMuchisOneWord('World'));
+console.log(howMuchIsOneWord('World'));
+
+// 5. Word Ranking. Create a function that takes a string of words and returns the highest scoring word. Each letter of a word scores points according to it's position in the alphabet: a = 1, b = 2, c = 3, etc.The returned string should only contain alphabetic characters (a-z). Preserve case in the returned string (see 4th example above). Examples:
+
+const wordRank = (sentence) => {
+    let word = '';
+    let newArray = new Array();
+    const myArray = sentence.split(' ');
+    for (let i = 0; i < myArray.length; i++) {
+        newArray.push(howMuchIsOneWord(myArray[i]));
+        console.log(newArray);
+    }
+    let biggestNumber = Math.max(...newArray);
+    //console.log(biggestNumber);
+    let position = newArray.indexOf(biggestNumber);
+    //console.log(position);
+    word = myArray[position];
+    //console.log(word);
+    return word;
+};
+
+console.log(wordRank("The quick brown fox.")); // ➞ "brown"
+console.log(wordRank("Nancy is very pretty.")); //  ➞ "pretty"
+console.log(wordRank("Check back tomorrow, man!")); //  ➞ "tomorrow"
+console.log(wordRank("Today is Wednesday.")); // ➞ "Wednesday"
