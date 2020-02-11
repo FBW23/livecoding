@@ -112,7 +112,7 @@ console.log(spaceWeights("Earth", 1, "Neptune")); // ➞ 1.14
 
 const howMuchIsOneWord = (word) => {
     let sum = 0;
-    const ALPHABET = ['alphabet', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
+    const ALPHABET = '_abcdefghijklmnopqrstuvwxyz';
     let currentChar, currentNumber;
     // console.log(ALPHABET.length); // 27 
     for (let i = 0; i < word.length; i++) {
