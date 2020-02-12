@@ -89,6 +89,43 @@ console.log(simpleYear[7][4]); // array starts counting at 0, thats why we need 
 
 // please access your own birthday now! [month-1] [day -1]
 
+// nestedObject
+const simpleYearObject = {};
+for (let month = 1; month < 13; month++) { // month
+    const currentMonth = {};
+    for (let day = 1; day < 32; day++) { // day
+        if (month === 2 && day === 29) {
+            break;
+        } else if (day === 31 && (month === 4 || month === 6 || month === 9 || month === 11)) {
+            break;
+        }
+        currentMonth[day] = day; // easiness every month has 31 days
+    }
+    simpleYearObject[month] = currentMonth;
+}
+console.log(simpleYearObject);
+
+// my birthday is 8th of june =) 
+
+console.log(simpleYearObject[6][8]); // 8 also possible directly or as strings 
+console.log(simpleYearObject['6']['8']); // 8 = bracket notation also possible with objects 
+//console.log(simpleYearObject.6.8); // because only numbers as keys, we cannot access with dot notation!!!
+
+// read.a.program.identifier  = chained access to an object with key.innerkey.innerinnerkey  = property.chain
+
+const read = {
+    a: { // first level 
+        program: { // second level 
+            identifier: 'value' // third level 
+            // if there are more levels i would consider it a problem ;-) 
+            // as a rule of thumb: three levels is the maximum! 
+        }
+    }
+};
+
+console.log(read.a.program.identifier); // value
+
+
 
 const months = [];
 for (let i = 1; i < 13; i++) {
@@ -113,3 +150,45 @@ const curlyObject = {
     ...object
 };
 console.log(curlyObject);
+
+// nestedObject with Arrays inside
+const mixedObject = {};
+for (let month = 1; month < 13; month++) { // month
+    const currentMonth = [];
+    for (let day = 1; day < 32; day++) { // day
+        if (month === 2 && day === 29) {
+            break;
+        } else if (day === 31 && (month === 4 || month === 6 || month === 9 || month === 11)) {
+            break;
+        }
+        currentMonth.push(day); // easiness every month has 31 days
+    }
+    mixedObject[month] = currentMonth;
+}
+console.log(mixedObject);
+// access??? to 8th of june
+console.log(mixedObject['6'][7]);// access to an array inside of object 
+
+
+
+// nestedArray with Objects inside
+const arrayOfObjects = [];
+for (let month = 1; month < 13; month++) { // month
+    const currentMonth = {};
+    for (let day = 1; day < 32; day++) { // day
+        if (month === 2 && day === 29) {
+            break;
+        } else if (day === 31 && (month === 4 || month === 6 || month === 9 || month === 11)) {
+            break;
+        }
+        currentMonth[day] = day; // easiness every month has 31 days
+    }
+    arrayOfObjects.push(currentMonth);
+}
+console.log(arrayOfObjects);
+// access??? to 8th of june
+console.log(arrayOfObjects[5][8]);// access to an object inside of array 
+console.log(arrayOfObjects[5]['8']);// access to an object inside of array 
+
+console.log(Array.isArray(arrayOfObjects));//true
+console.log(Object.isFrozen(arrayOfObjects));//false
