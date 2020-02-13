@@ -143,7 +143,8 @@ const cook = (foodItem) => { // we cook each individually
         case 'corn':
             return 'popcorn';
         default: // error handling
-            console.log('this is no valid input!'); // we could also return that, but then it would land inside of the array!
+            console.log('this is no valid input!'); 
+            // we could also return that, but then it would land inside of the array!
     }
 };
 const processedFood = food.map(foodItem => cook(foodItem)); // we map each original food item to its cooked equivalent
