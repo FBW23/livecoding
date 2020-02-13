@@ -135,9 +135,9 @@ const food = ['cow', 'potato', 'hen', 'corn']; // original food sources
 const cook = (foodItem) => { // we cook each individually
     switch (foodItem) {
         case 'cow':
-            return 'hamburger'; // no need for break because we return immediately
+            return '🍔'; // an emoji needs to be wrapped in string quotation marks, too! 
         case 'potato':
-            return 'pommes';
+            return 'pommes';// no need for break because we return immediately
         case 'hen':
             return 'chicken';
         case 'corn':
@@ -147,5 +147,5 @@ const cook = (foodItem) => { // we cook each individually
     }
 };
 const processedFood = food.map(foodItem => cook(foodItem)); // we map each original food item to its cooked equivalent
-console.log(processedFood); // [ 'hamburger', 'pommes', 'chicken', 'popcorn' ]
+console.log(processedFood); // [ '🍔', 'pommes', 'chicken', 'popcorn' ]
 
