@@ -192,3 +192,4 @@ console.log(arrayOfObjects[5]['8']);// access to an object inside of array
 
 console.log(Array.isArray(arrayOfObjects));//true
 console.log(Object.isFrozen(arrayOfObjects));//false
+
