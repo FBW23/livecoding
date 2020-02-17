@@ -65,7 +65,7 @@ const autobots = transformers.filter(areYouAutobot);
 console.log(autobots);
 
 function areYouAutobot2(transformer) {
-    return transformer.team === 'Autobot';  // checks for value "Autobot" in key "team"
+    return transformer.team === 'Autobot'; // checks for value "Autobot" in key "team"
     // if equal, then return
     // if not, return nothing! 
 }
@@ -74,7 +74,7 @@ const autobots2 = transformers.filter(areYouAutobot2);
 console.log(autobots2);
 
 const areYouAutobot3 = (transformer) => {
-    return transformer.team === 'Autobot';  // checks for value "Autobot" in key "team"
+    return transformer.team === 'Autobot'; // checks for value "Autobot" in key "team"
     // if equal, then return
     // if not, return nothing! 
 };
@@ -82,18 +82,18 @@ const areYouAutobot3 = (transformer) => {
 const autobots3 = transformers.filter(areYouAutobot3);
 console.log(autobots3);
 
-const areYouAutobot4 = (transformer) => transformer.team === 'Autobot' ? true : false;  
-    // checks for value "Autobot" in key "team"
-    // if equal, then return
-    // if not, return nothing! 
+const areYouAutobot4 = (transformer) => transformer.team === 'Autobot' ? true : false;
+// checks for value "Autobot" in key "team"
+// if equal, then return
+// if not, return nothing! 
 
 const autobots4 = transformers.filter(areYouAutobot4);
 console.log(autobots4);
 
-const areYouAutobot5 = (transformer) => transformer.team === 'Autobot';  
-    // checks for value "Autobot" in key "team"
-    // if equal, then return
-    // if not, return nothing! 
+const areYouAutobot5 = (transformer) => transformer.team === 'Autobot';
+// checks for value "Autobot" in key "team"
+// if equal, then return
+// if not, return nothing! 
 
 const autobots5 = transformers.filter(areYouAutobot4);
 console.log(autobots5);
@@ -115,3 +115,29 @@ console.log(autobots6);
     team: 'Autobot'
 }]*/
 
+// RECUDE 
+
+function countAutobot(previous, transformer) {
+    console.log(previous);
+    console.log(transformer);
+    // return 1 if Autobot is the team 
+    if (transformer.team === 'Autobot') {
+        return previous + 1;
+    } else {
+        return previous;
+    }
+}
+
+const countAutobots = transformers.reduce(countAutobot, 0); // initially count starts at 0
+console.log(countAutobots);
+
+// put all the names in one string
+// usecase? only one first 
+function assembleString(previous, transformer) {
+    console.log(previous);
+    console.log(transformer);
+    return previous + transformer.name + ' ';
+}
+
+const assembledStrings = transformers.reduce(assembleString, ''); // initially string starts as empty string
+console.log(assembledStrings);
