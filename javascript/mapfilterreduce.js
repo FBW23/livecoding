@@ -141,3 +141,50 @@ function assembleString(previous, transformer) {
 
 const assembledStrings = transformers.reduce(assembleString, ''); // initially string starts as empty string
 console.log(assembledStrings);
+
+function canNest(arr1, arr2) {
+    let arr1Min = Math.min(...arr1); // spread operator!
+    let arr2Min = Math.min(...arr2);
+    if (arr1Min > arr2Min) {
+        console.log("Maybe!!!");
+        let arr1Max = Math.max(...arr1);
+        let arr2Max = Math.max(...arr2);
+        if (arr1Max < arr2Max) {
+            console.log(true);
+            return true;
+        }
+    }
+    console.log(false);
+    return false;
+}
+
+function canNest(arr1, arr2) {
+    let arr1Min = Math.min(...arr1); // spread operator!
+    let arr2Min = Math.min(...arr2);
+    let arr1Max = Math.max(...arr1);
+    let arr2Max = Math.max(...arr2);
+    if (arr1Min > arr2Min && arr1Max < arr2Max) {
+        console.log(true);
+        return true;
+    }
+    console.log(false);
+    return false;
+}
+
+const findMin = (acc, val) => (acc < val ? acc : val); // function for finding a minimum
+const findMax = (acc, val) => (acc > val ? acc : val); // function for finding a maximum
+
+function canNest2(arr1, arr2) {
+    const arr1Min = arr1.reduce(findMin);
+    const arr1Max = arr1.reduce(findMax);
+    const arr2Min = arr2.reduce(findMin);
+    const arr2Max = arr2.reduce(findMax);
+    return arr1Min > arr2Min && arr1Max < arr2Max;
+}
+
+console.log(canNest2([1, 2, 3, 4], [0, 6])); //➞ true
+console.log(canNest2([3, 1], [4, 0])); // ➞ true
+console.log(canNest2([9, 9, 8], [8, 9])); // ➞ false
+console.log(canNest2([1, 2, 3, 4], [2, 3])); // ➞ false
+
+console.log(Math.min);

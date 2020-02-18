@@ -137,16 +137,62 @@ const cook = (foodItem) => { // we cook each individually
         case 'cow':
             return '🍔'; // an emoji needs to be wrapped in string quotation marks, too! 
         case 'potato':
-            return 'pommes';// no need for break because we return immediately
+            return 'pommes'; // no need for break because we return immediately
         case 'hen':
             return 'chicken';
         case 'corn':
             return 'popcorn';
         default: // error handling
-            console.log('this is no valid input!'); 
+            console.log('this is no valid input!');
             // we could also return that, but then it would land inside of the array!
     }
 };
-const processedFood = food.map(foodItem => cook(foodItem)); // we map each original food item to its cooked equivalent
+const processedFood = food.map(cook); // we map each original food item to its cooked equivalent
+
 console.log(processedFood); // [ '🍔', 'pommes', 'chicken', 'popcorn' ]
 
+const isVegetarian = (veggieItem) => {
+    switch (veggieItem) {
+        case "pommes":
+            return "pommes";
+        case "popcorn":
+            return "popcorn";
+        default:
+            break;
+    }
+};
+const veggieFood = processedFood.filter(isVegetarian);
+console.log(veggieFood);
+
+
+// Desired output 💩 
+// function name should be eat
+
+function eat(previous, meal) {
+    console.log('previous: ' + previous);
+    console.log('meal ' + meal);
+    return '💩';
+}
+
+const emptyArray = [];
+
+const poop = processedFood.reduce(eat); // burger and fries 
+console.log(poop);
+
+const output = emptyArray.reduce(eat, null); // null for empty cases 
+console.log(output);
+
+const output2 = emptyArray.reduce(eat, ''); // doesn't work case 
+console.log(output2);
+
+
+const oneSingleThingArray = ['plamen']; // we are not able to use reduce on less than 2 items 
+
+const sum2 = function(previous, number) {
+    console.log(previous);
+    console.log(number);
+    return previous + number;
+}
+
+const sums = oneSingleThingArray.reduce(sum2, 'balasz'); // 5
+console.log(sums); // balaszplamen
