@@ -1,15 +1,30 @@
 class Animal {
-    constructor(name) {
+    constructor(name, legs) {
         this.name = name;
         this.age = 15; // standard age predefined
-        this.legs = 4;
+        this.legs = legs; // fixed definition 
         this.country = 'Turkish'; // just as showcase 
     }
-
     speak() {
         console.log(`${this.name} makes a noise.`);
     }
 }
+
+class Squirrel extends Animal {
+    constructor(name, legs, nuts) {
+        super(name, legs); // save side 
+        this.nuts = nuts;
+    }
+    // 1. call the super constructor and add some more features
+    // 2. let it speak with its own voice
+    // 3. make a method which is very special to your animal 
+}
+
+const scratchy = new Squirrel('Scratchy', 4, 'Mandel');
+console.log(scratchy);
+console.log(scratchy.legs);
+// debugger; Keyword 
+
 
 class Cat extends Animal { // subclasses
     // define our class in details
@@ -96,3 +111,26 @@ newRectangle.width = 20;
 console.log(newRectangle);
 //console.log(newRectangle.calcArea());
 console.log(newRectangle.area);
+
+
+class Balasz { // Abstraction 
+    constructor(age) {
+        this.age = age;
+    }
+    laugh(){
+        console.log('Balasz laughes :)');
+    }
+}
+
+// if every key/property/methods is the same 
+
+
+class BalaszTwo extends Balasz {
+    constructor(age, nationality) {
+        super(age);
+        this.nationality = nationality;
+    }
+}
+
+const balasz = new BalaszTwo(20, 'Hungarian');
+console.log(balasz);
