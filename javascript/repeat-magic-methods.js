@@ -81,7 +81,6 @@ const newArrayOfObjects = arrayOfObjects.map(function (object) {
 console.log(newArrayOfObjects);
 
 // After that, calculate the average satisfaction level per course. Store the results for each into an array and print the title of the course that has the biggest average of the three courses. 
-
 function average(arrayOfObjects) {
     let resultJS = [];
     let resultPHP = [];
@@ -96,8 +95,33 @@ function average(arrayOfObjects) {
             resultJS.push(item.levelOfSatisfaction);
         }
     });
-    console.log(resultJS);
-    console.log(resultPHP);
-    console.log(resultRuby);
+    const sum = (previous, current) => previous + current;
+    const sumJS = resultJS.reduce(sum);
+    const sumPHP = resultPHP.reduce(sum);
+    const sumRuby = resultRuby.reduce(sum);
+    const averageJS = {
+        name: 'JavaScript Course',
+        average: (sumJS / resultJS.length).toFixed(2)
+    };
+    const averagePHP = {
+        name: 'PHP Course',
+        average: (sumPHP / resultPHP.length).toFixed(2)
+    };
+    const averageRuby = {
+        name: 'Ruby Course',
+        average: (sumRuby / resultRuby.length).toFixed(2)
+    };
+    let average = [];
+    average.push(averageJS, averagePHP, averageRuby);
+    console.log(average);
+    let highestCourse = average.reduce((previous, current) => {
+        if (previous.average > current.average) {
+            return previous;
+        } else {
+            return current;
+        }
+    });
+    console.log(highestCourse);
+    console.log(`${highestCourse.name} was the highest: ${highestCourse.average}`); // highest
 }
 average(arrayOfObjects);
