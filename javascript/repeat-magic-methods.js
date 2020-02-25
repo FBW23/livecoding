@@ -87,12 +87,25 @@ function average(arrayOfObjects) {
     let resultRuby = [];
     // same as for(item of array){...}
     arrayOfObjects.forEach(item => {
-        if (item.courseHasTaken === 'PHP Course') {
-            resultPHP.push(item.levelOfSatisfaction);
-        } else if (item.courseHasTaken === 'Ruby Course') {
-            resultRuby.push(item.levelOfSatisfaction);
-        } else if (item.courseHasTaken === 'JS Course') {
-            resultJS.push(item.levelOfSatisfaction);
+        // if (item.courseHasTaken === 'PHP Course') {
+        //     resultPHP.push(item.levelOfSatisfaction);
+        // } else if (item.courseHasTaken === 'Ruby Course') {
+        //     resultRuby.push(item.levelOfSatisfaction);
+        // } else if (item.courseHasTaken === 'JS Course') {
+        //     resultJS.push(item.levelOfSatisfaction);
+        // }
+        switch (item.courseHasTaken) {
+            case 'PHP Course':
+                resultPHP.push(item.levelOfSatisfaction);
+                break;
+            case 'Ruby Course':
+                resultRuby.push(item.levelOfSatisfaction);
+                break;
+            case 'JS Course':
+                resultJS.push(item.levelOfSatisfaction);
+                break;
+            default:
+                console.log('Error');
         }
     });
     const sum = (previous, current) => previous + current;
