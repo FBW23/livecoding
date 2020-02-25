@@ -11,7 +11,8 @@ try {
         console.log(myArray[2]); // logical Error undefined
     } else {
         //throw `${ArrayIsTooShortError} [${myArray}]`;
-        throw `${UserArrayIsTooShortError}. You provided: [${myArray}]`;
+        //throw `${UserArrayIsTooShortError}. You provided: [${myArray}]`;
+        throw new Error('my error message'); // make an Error Instance instantly!
     }
 
     callAFunctionNotExisting(); // Runtime error
@@ -22,3 +23,4 @@ try {
     // expected output: ReferenceError: nonExistentFunction is not defined
     // Note - error messages will vary depending on browser
 }
+
