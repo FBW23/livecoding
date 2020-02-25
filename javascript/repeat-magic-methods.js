@@ -138,3 +138,49 @@ function average(arrayOfObjects) {
     console.log(`${highestCourse.name} was the highest: ${highestCourse.average}`); // highest
 }
 average(arrayOfObjects);
+
+/*Imagine that you work currently as an HR manager in a company that wants to hire developers. The prerequisites for hiring someone is to know 3 of the 5 following programming languages. PHP, JavaScript, Ruby, Python and or Java.
+If the candidate has at least 3 of these 5 skills then he should be hire. 
+Create an array that holds the prerequisites. And a different array that holds every candidate's skills. Write a function so it can be re-usable for multiple pre-requisites and multiple candidates at the same time.
+Create an empty array to store the full name of the ones that got hired.
+If the guy is hired, push his name to the employed ones array. At the end this array is going to contain the names for every person that got hired.
+Hint: You may want to use the "includes" array method, which allows you to check if a specific value is included into an array or not and returns a boolean value.*/
+let prerequisites = ['PHP', 'JavaScript', 'Java', 'Python', 'Ruby'];
+prerequisites.reverse();
+console.log(prerequisites);
+let candidates = [{
+        fullName: 'Plamen',
+        skillSet: ['JavaScript', 'Ruby', 'R']
+    },
+    {
+        fullName: 'Aghy',
+        skillSet: ['JavaScript', 'Laravel', 'Delphi']
+    },
+    {
+        fullName: 'Martina',
+        skillSet: ['Java', 'JavaScript', 'PHP']
+    }
+];
+
+function hiringManager(prerequisites, candidates) {
+    let hiredPeople = [];
+    candidates.forEach(candidate => {
+        for (let i = 0; i < prerequisites.length; i++) {
+            if (candidate.skillSet.includes(prerequisites[i])) {
+                if (candidate.includedSkills) {
+                    candidate.includedSkills++;
+                } else {
+                    candidate.includedSkills = 1;
+                }
+            }
+        }
+    });
+    console.log(candidates);
+    hiredPeople = candidates.filter(candidate => {
+        return (candidate.includedSkills >= 3)
+    });
+    console.log(hiredPeople);
+    return hiredPeople;
+}
+
+hiringManager(prerequisites, candidates);
