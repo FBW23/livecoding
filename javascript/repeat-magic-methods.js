@@ -184,3 +184,14 @@ function hiringManager(prerequisites, candidates) {
 }
 
 hiringManager(prerequisites, candidates);
+
+let namesAndResults = [
+    ['Nour', 92], 
+    ['Jake', 67]
+];
+
+console.log(namesAndResults[0]);
+
+console.log(namesAndResults[0][1]);
+
+console.log(namesAndResults[0][1] > namesAndResults[1][1]); // 92 > 67 => true boolean
