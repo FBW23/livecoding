@@ -39,5 +39,21 @@ function game() {
 console.log(document);
 console.log(document.head);
 console.log(document.title);
-let title = document.getElementById('websiteTitle');
+// get html nodes 
+const title = document.getElementById('websiteTitle');
 console.log(title);
+// changes the old css 
+title.style.color = '#123123';
+
+// get one link and change color
+const link = document.querySelector('a');
+console.log(link);
+link.style.color = 'purple';
+
+
+// get all the links and change colors
+const links = document.querySelectorAll('a'); // get an array of all the links
+console.log(links);
+for (let i = 0; i < links.length; i++) {
+    links[i].style.color = 'hotpink';
+}
