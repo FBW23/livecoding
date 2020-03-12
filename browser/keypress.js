@@ -2,7 +2,7 @@ const newsletterBox = document.querySelector('#newsletter');
 
 //console.log(newsletterBox);
 
-const myFunction = () => {
+const hideFunction = () => {
     // console.log('keydown');
     // console.log(event);
     // debugger
@@ -11,4 +11,11 @@ const myFunction = () => {
     }
 };
 
-document.addEventListener('keydown', myFunction);
+const showFunction = () => {
+    if (event.keyCode === 13) { // 13 enter Key?
+        newsletterBox.style.display = 'block';
+    }
+};
+
+document.addEventListener('keydown', hideFunction);
+document.addEventListener('keyup', showFunction);
