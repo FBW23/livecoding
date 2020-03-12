@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,9 +8,20 @@
     <link rel="stylesheet" href="keypress.css">
     <script src="keypress.js" defer></script>
 </head>
+
 <body>
     <div id="newsletter">
         Subscribe our newsletter!
+        <!-- normally we want to use method POST, just for the showcase we keep GET -->
+        <form action="#" method="GET">
+            <label for="email">
+                Please enter E-Mail-Address:
+            </label>
+            <input type="email" id="email" name="email" placeholder="example@domain.org">
+            <input type="submit" value="Submit me!">
+            <input type="reset" value="Reset me!">
+        </form>
     </div>
 </body>
+
 </html>
