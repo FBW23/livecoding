@@ -1,21 +1,25 @@
-const ul = document.querySelector('ul');
-const li = document.querySelector('li'); // take first LI ONLY 
-const myAlert = function () {
-    alert('hey, you clicked on the ul !');
-    console.log(event.currentTarget);  // container which handles the event
-    console.log(event.target);// originally clicked on item
-};
-const myAlertLi = function () {
-    // stop the bubbling
-    event.stopPropagation(); // ignored because useCapture!!! 
-    alert('hey, you clicked on the li !');
-    console.log(event.currentTarget); // container which handles the event
-    console.log(event.target); // originally clicked on item
-};
-ul.addEventListener('click', myAlert, true);  // useCapture boolean true
-// event.currentTarget = UL !== event.target
-li.addEventListener('click', myAlertLi); // useCapture default = false
-// event.currentTarget = LI === event.target
+document.addEventListener('DOMContentLoaded', function () {
+
+    const ul = document.querySelector('ul');
+    const li = document.querySelector('li'); // take first LI ONLY 
+    const myAlert = function () {
+        alert('hey, you clicked on the ul !');
+        console.log(event.currentTarget); // container which handles the event
+        console.log(event.target); // originally clicked on item
+    };
+    const myAlertLi = function () {
+        // stop the bubbling
+        event.stopPropagation(); // ignored because useCapture!!! 
+        alert('hey, you clicked on the li !');
+        console.log(event.currentTarget); // container which handles the event
+        console.log(event.target); // originally clicked on item
+    };
+    ul.addEventListener('click', myAlert, true); // useCapture boolean true
+    // event.currentTarget = UL !== event.target
+    li.addEventListener('click', myAlertLi); // useCapture default = false
+    // event.currentTarget = LI === event.target
+
+});
 
 // DELEGATE EVENTS WITH USECAPTURE FROM PARENT TO CHILD 
 // WE COME FIRST!!! FORCE IT FIRST COME FIRST SERVE ;) 
