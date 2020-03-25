@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Include Handlebars from a CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+    <script src="handlebars.js" defer></script>
+    <!-- <script>
+        // compile the template
+        var template = Handlebars.compile("Handlebars <b>{{doesWhat}}</b>");
+        // execute the compiled template and print the output to the console
+        console.log(template({
+            doesWhat: "rocks!"
+        }));
+    </script> -->
+    <script id="address-template" type="text/x-handlebars-template">
+        <p>You can find me in {{city}}. My address is {{number}} {{street}}.</p>
+    </script>
+    <script id="personal-template" type="text/x-handlebars-template">
+        <p>Good morning {{firstName}} {{lastName}}.</p>
+    </script>
+    <script id="ul-template" type="text/x-handlebars-template">
+        <ul class="people_list">
+            {{#each people}}
+                <li>{{this}}</li>
+            {{/each}}
+        </ul> 
+    </script>
+</head>
+
+<body>
+    <h1>Handlebars rocks!</h1>
+    <!--Your new content will be displayed in here-->
+    <div class="content-placeholder"></div>
+    <div class="personal-placeholder"></div>
+    <div class="ul-placeholder"></div>
+</body>
+
+</html>
