@@ -1,12 +1,19 @@
-import { myFunction } from './module.js';
-//import default2 from './module.js';
+//import { myFunction, myModule } from './module.js';
+// import <namespace> from <path> 
+// IF WE WANT TO HAVE EVERYTHING
+// import * as <namespace> from <path>
+// IMPORT SHOULD COME IN THE BEGINNING
+import * as modules from './module.js';
+// import balasz from './module.js';
 
+document.modules = modules; 
 
 // This shows how it works! 
 document.showImport = function showImport () {
-    myFunction();
+    modules.myFunction();
 }
 
-document.default2 = function default2 () {
-    //default2;
-}
+modules.default; // default
+
+modules.myFunction();
+console.log(modules.myModule2);

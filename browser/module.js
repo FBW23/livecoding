@@ -3,13 +3,16 @@
 // Immediately Invoked Function Expression
 
 // About Modules
-export default "Why do I need this?";
 
+// MUST HAVE EXPORT DEFAULT ALWAYS!!! 
+export default function() {
+    console.log( "Why do I need this?");
+};
 
-export function myFunction() {
+function myFunction() {
     console.log('hello world');
-
-}; // <<--- immediately invoking (calling) expression
+}; 
+// <<--- immediately invoking (calling) expression
 
 // we can make modules with javascript 
 // if we want to make a function indepent from surroundings 
@@ -17,9 +20,11 @@ export function myFunction() {
 // module would be the solutions! 
 // relies on the module pattern
 
-export function myModule() {
+function myModule() {
+    // keep it from changing stuff
     'use strict'; // more strict than normal ecmascript
     return {
+        // showing stuff
         consoleLog: function () {
             console.log('hello module');
         }
@@ -29,7 +34,8 @@ export function myModule() {
 
 // need to export the module itself
 // everything whats public available should be in the return ! 
-export function myModule2() {
+function myModule2() {
+    // hiding stuff
     'use strict';
     const _PI = 3.14;
     // underscore indicated privateness
@@ -51,9 +57,13 @@ export function myModule2() {
     }
 
     return {
+        // what we want to show
         myConst: 3.14, // variables
         // public name left, right is internal function
         publicMethod: differentNameMethod,
         mysteriousFunction: multiplyWithPI // functions
     };
 };
+// if you want to export more than one thing 
+// the export needs to come at the end
+export {myFunction, myModule, myModule2 }; 
