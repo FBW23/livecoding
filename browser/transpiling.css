@@ -1,0 +1,27 @@
+/* // TRANSPILING & BUNDLING 
+// SASS? How did it work again? 
+// We will write Sass CSS, f.e. nested CSS */
+body {
+    background: red;
+
+    input {
+        background: yellow;
+    }
+}
+
+/* ==========================
+TRANSPILATION => translation of SASS to CSS
+sass <input.scss>:<output.css> <input/>:<output/> <dir/>
+normaly sass watch ... runs as soon as we change something
+==========================
+OUTPUT WOULD be */
+
+body {
+    background: red; 
+}
+body input {
+    background: yellow;
+}
+/* =========================
+This way its readable for the browser! 
+========================= */
