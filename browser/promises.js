@@ -12,7 +12,7 @@ function clearAlert() {
 
 // new Promise(<function>), Promise.resolve() ==> Promise.then()
 // MINIMUM to have a Promise! Success case 
-var promise = new Promise(function (resolve, reject) {
+const promise = new Promise(function (resolve, reject) {
     const x = "geeksforgeeks";
     const y = "geeksforgeeks";
     if (x === y) {
@@ -24,9 +24,11 @@ var promise = new Promise(function (resolve, reject) {
     console.log('Success, You are a GEEK');
 }).catch(function () { // rejected 
     console.log('Some error has occured');
-}).finally(function () { // executed finally
-    console.log('okay, promise has finished!');
 });// CHAINING ALL TOGETHER 
+
+promise.finally(function () { // executed finally
+    console.log('okay, promise has finished!');
+});
 
 
 function delayedAlert() {
