@@ -4,7 +4,7 @@ const myGlobal = 'hello world';
 
 // JSON is JavaScript Objects in text
 const myObject = {
-  firstName: "John",
+  name: "John",
   lastName: "Smith", // string
   isAlive: true, // boolean
   age: 27 // number
