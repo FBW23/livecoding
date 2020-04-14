@@ -59,7 +59,7 @@ const myPromise = new Promise((resolve, reject) => {
 // const promiseA = Promise.resolve('result of a()'); // LATE COMER! 
 
 const promiseA = new Promise ((resolve, reject) => { // pending!`????
-    i++; // i is not defined => reject
+    i++; // i is not defined => reject(errormessage)
     setTimeout(() => {
         resolve(i); // resolved state 
     }, 1000); // resolve after 1 second
