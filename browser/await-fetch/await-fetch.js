@@ -30,7 +30,7 @@ class Data {
   }
   async fetchData(url) {
     // API CALL 
-    this.myData = await myJsonData;
+    //this.myData = await myJsonData; ==> replaces return for later use
   }
 }
 
