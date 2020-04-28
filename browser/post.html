@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>POST Document</title>
+</head>
+<body>
+    <!-- modify this form HTML and place wherever you want your form -->
+    <form action="https://formspree.io/mdownzjg" method="POST" enctype="application/x-www-form-urlencoded">
+        <label>
+            Your email:
+            <input type="text" name="_replyto">
+        </label>
+        <label>
+            Your message:
+            <textarea name="message"></textarea>
+        </label>
+        <!-- your other form fields go here -->
+        <button type="submit">Send</button>
+    </form>
+
+<hr>
+    <!-- modify this form HTML and place wherever you want your form -->
+    <form action="https://formspree.io/mdownzjg" method="POST" enctype="multipart/form-data">
+        <label>
+            Your email:
+            <input type="text" name="_replyto">
+        </label>
+        <label>
+            Your file:
+            <input type="file" name="upload">
+        </label>
+        <button type="submit">Send</button>
+    </form>
+
+    <hr>
+<!-- email example-->
+    <!-- modify this form HTML and place wherever you want your form -->
+    <form action="mailto:martina.freundorfer@digitalcareerinstitute.org?subject=Websiterequest" method="POST" enctype="text/plain">
+        <label>
+            Your email:
+            <input type="text" name="_replyto">
+        </label>
+        <label>
+            Your message:
+            <textarea name="message"></textarea>
+        </label>
+        <!-- your other form fields go here -->
+        <button type="submit">Send</button>
+    </form>
+</body>
+</html>
