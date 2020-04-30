@@ -132,4 +132,4 @@ fetch(urlServiceAddress)
     return weatherResponse.json();
 }).then(weatherData  => {
     console.log(weatherData);
-})
+});
